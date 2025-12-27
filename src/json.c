@@ -25,6 +25,8 @@ json_create (const char * p_str)
         goto EXIT;
     }
 
+    status = 0;
+
     EXIT:
         if (-1 == status)
         {
@@ -32,6 +34,18 @@ json_create (const char * p_str)
             p_json = NULL;
         }
         return p_json;
+}
+
+void
+json_destroy (json_t * p_json)
+{
+    if (NULL == p_json)
+    {
+        goto EXIT;
+    }
+
+    EXIT:
+        free(p_json);
 }
 
 /***   end of file   ***/

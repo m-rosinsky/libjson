@@ -11,7 +11,7 @@
 int
 main (void)
 {
-    json_t * p_json = json_create("{}")
+    json_t * p_json = json_create("{}");
     if (NULL == p_json)
     {
         printf("create failed\n");

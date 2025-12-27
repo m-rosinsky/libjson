@@ -27,6 +27,16 @@ typedef struct _json json_t;
 json_t *
 json_create (const char * p_str);
 
+/*!
+ * @brief This function destroys a JSON context and frees memory.
+ *
+ * @param p_json A JSON context.
+ *
+ * @return No return value expected.
+ */
+void
+json_destroy (json_t * p_json);
+
 #endif // _SRC_JSON_H
 
 /***   end of file   ***/

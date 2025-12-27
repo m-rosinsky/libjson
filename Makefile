@@ -46,6 +46,8 @@ test: all
 	@echo "  [+] Compiling test/main.c"
 	@$(CC) $(CFLAGS) -o ./$(BINS)/test_json ./test/main.c -L./$(LIBS) -ljson -Wl,-rpath,'$$ORIGIN/../$(LIBS)'
 
+	@echo "  [+] Compiled test binary at ./$(BINS)/test_json"
+
 	@echo "Done"
 
 clean:
